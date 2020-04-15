@@ -33,6 +33,7 @@
             var geometry3 = new THREE.BoxGeometry();
             var material3 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
             var cube3 = new THREE.Mesh(geometry3, material3);
+            cube3.position.x=3;
             scene.add(cube3);//this moves the camera towards the viewer
             camera.position.z = 5;
             function animate() {
@@ -40,7 +41,7 @@
                 geometry.rotateY(0.01);
                 geometry2.rotateX(0.05);
                 geometry2.rotateY(0.05);
-                Cube2.postion.y=*number 5;
+                //Cube2.postion.y=*number 5;
                geometry3.scale(1.02, 1.02, 1.02);
 
 
