@@ -3,7 +3,9 @@ Lab2
 https://drive.google.com/file/d/1QYKeJLO3ViBexm9sDF_cHSVOLWtTnCoI/view?usp=sharing
 
 ![](lab2/images/Lab2Part2.png)
-Lab2
+
+Lab3
+
 https://drive.google.com/file/d/1eXeT12Woxa9z_oUJKzS7l_4he48FfoA5/view?usp=sharing
 The cube on the very left is made from a MeshLambert material. I made a new cube variable and new material variable to create cube2, out of the Lambert material. I made the color pink and the emissive blue causing a purplish tinge on the cube and one side becoming blue when facing the light.
 
