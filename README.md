@@ -9,6 +9,6 @@ The cube on the very left is made from a MeshLambert material. I made a new cube
 
  The second cube from the left is the one from the lab assignment. This is made out of a mesh Phong Material and gets a green tinge when facing the light due to the specular being set to green. The color of the cube is grey causing the main color on the cube to be grey.
 
-The third cube is also one from the lab assignment using fragment and vertex shaders. These shaders causes the corner to be shaded. The gl_fragcolor in m y fragment shader file mixes the two colors together to give this shaded look of the person color and the aquamarine color.
+The third cube is also one from the lab assignment using fragment and vertex shaders. These shaders causes the corner to be shaded. The gl_fragcolor in my fragment shader file mixes the two colors together to give this shaded look of the blue color and the aquamarine color.
 
-The fourth cube I made a new FragmentShader file with the colors colorc and color d instead. These colors I set to a magenta color and red color that made the magenta tinge when facing the light. 
+The fourth cube I made a new FragmentShader file with the colors colorc and color d instead. These colors I set to a magenta color and red color that made the magenta tinge when facing the light. I also used the gl_fragcolor in my fragmentshader2 file to mix the two colors together.
