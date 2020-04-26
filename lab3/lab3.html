@@ -68,127 +68,132 @@
             function addFourthCube() {
                 if (count2 == 2) {
                     let uniforms = {
-                        colorD: {
+                        colorE: {
                             type: 'vec3', value: new
-                                THREE.Color(0xFF33E6)
+                                THREE.Color(0x74EBD5)
                         },
-                        colorC: {
-                            type: 'vec3', value: new
-                                THREE.Color(0xFF3349)
-                        }
-                    };
+                        //let uniforms = {
+                            colorD: {
+                                type: 'vec3', value: new
+                                    THREE.Color(0xFF33E6)
+                            },
+                            colorC: {
+                                type: 'vec3', value: new
+                                    THREE.Color(0xFF3349)
+                            }
+                        };
 
-                    geometry4 = new THREE.BoxGeometry(1, 1, 1);
-                    material4 = new THREE.ShaderMaterial({
-                        uniforms: uniforms,
-                        fragmentShader: fshader2,
-                        vertexShader: vshader2,
-                        precision: "mediump"
+                        geometry4 = new THREE.BoxGeometry(1, 1, 1);
+                        material4 = new THREE.ShaderMaterial({
+                            uniforms: uniforms,
+                            fragmentShader: fshader2,
+                            vertexShader: vshader2,
+                            precision: "mediump"
+                        });
+
+                        mesh4 = new THREE.Mesh(geometry4, material4);
+                        mesh4.position.x = 4;
+                        scene.add(mesh4);
+                    }
+                }
+
+                THREE.Cache.enabled = true;
+                var count = 0;
+                var loader = new THREE.FileLoader();
+                var fshader, vshader;
+
+                var count2 = 0;
+                var loader2 = new THREE.FileLoader();
+                var fshader2, vshader2;
+
+                loader.load('shaders/vertexShader.vert',
+                    // onLoad callback
+                    function (data) {
+                        console.log(data); // output the text to the console
+                        vshader = data;
+                        count += 1;
+                        addCoolCube();
+                        // we will write this method
+                    },
+                    // onProgress callback
+                    function (xhr) {
+                        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                    },
+                    // onError callback
+                    function (err) {
+                        console.error('An error happened');
                     });
 
-                    mesh4 = new THREE.Mesh(geometry4, material4);
-                    mesh4.position.x = 4;
-                    scene.add(mesh4);
+                loader.load('shaders/fragmentShader.frag',
+                    // onLoad callback
+                    function (data) {
+                        console.log(data); // output the text to the console
+                        fshader = data;
+                        count += 1;
+                        addCoolCube();
+                        // we will write this method
+                    },
+                    // onProgress callback
+                    function (xhr) {
+                        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                    },
+                    // onError callback
+                    function (err) {
+                        console.error('An error happened');
+                    });
+
+
+                loader2.load('shaders/vertexShader.vert',
+                    // onLoad callback
+                    function (data) {
+                        console.log(data); // output the text to the console
+                        vshader2 = data;
+                        count2 += 1;
+                        addFourthCube(); // we will write this method
+                    },
+                    // onProgress callback
+                    function (xhr) {
+                        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                    },
+                    // onError callback
+                    function (err) {
+                        console.error('An error happened');
+                    });
+
+                loader2.load('shaders/fragmentShader2.frag',
+                    // onLoad callback
+                    function (data) {
+                        console.log(data); // output the text to the console
+                        fshader2 = data;
+                        count2 += 1;
+                        addFourthCube();// we will write this method
+                    },
+                    // onProgress callback
+                    function (xhr) {
+                        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                    },
+                    // onError callback
+                    function (err2) {
+                        console.error('An error happened');
+                    });
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    geometry.rotateX(0.01);
+                    geometry.rotateY(0.01);
+                    geometry2.rotateX(0.01);
+                    if (geometry1) {
+                        geometry1.rotateX(0.01);
+                        geometry1.rotateY(0.01);
+                    }
+                    if (geometry4) {
+                        geometry4.rotateX(0.01);
+                        geometry4.rotateY(0.01);
+                    }
+
+
+                    renderer.render(scene, camera);
                 }
-            }
-
-            THREE.Cache.enabled = true;
-            var count = 0;
-            var loader = new THREE.FileLoader();
-            var fshader, vshader;
-
-            var count2 = 0;
-            var loader2 = new THREE.FileLoader();
-            var fshader2, vshader2;
-
-            loader.load('shaders/vertexShader.vert',
-                // onLoad callback
-                function (data) {
-                    console.log(data); // output the text to the console
-                    vshader = data;
-                    count += 1;
-                    addCoolCube();
-                    // we will write this method
-                },
-                // onProgress callback
-                function (xhr) {
-                    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-                },
-                // onError callback
-                function (err) {
-                    console.error('An error happened');
-                });
-
-            loader.load('shaders/fragmentShader.frag',
-                // onLoad callback
-                function (data) {
-                    console.log(data); // output the text to the console
-                    fshader = data;
-                    count += 1;
-                    addCoolCube();
-                    // we will write this method
-                },
-                // onProgress callback
-                function (xhr) {
-                    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-                },
-                // onError callback
-                function (err) {
-                    console.error('An error happened');
-                });
-
-
-            loader2.load('shaders/vertexShader.vert',
-                // onLoad callback
-                function (data) {
-                    console.log(data); // output the text to the console
-                    vshader2 = data;
-                    count2 += 1;
-                    addFourthCube(); // we will write this method
-                },
-                // onProgress callback
-                function (xhr) {
-                    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-                },
-                // onError callback
-                function (err) {
-                    console.error('An error happened');
-                });
-
-            loader2.load('shaders/fragmentShader2.frag',
-                // onLoad callback
-                function (data) {
-                    console.log(data); // output the text to the console
-                    fshader2 = data;
-                    count2 += 1;
-                    addFourthCube();// we will write this method
-                },
-                // onProgress callback
-                function (xhr) {
-                    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-                },
-                // onError callback
-                function (err2) {
-                    console.error('An error happened');
-                });
-
-            function animate() {
-                requestAnimationFrame(animate);
-                geometry.rotateX(0.01);
-                geometry.rotateY(0.01);
-                geometry2.rotateX(0.01);
-                if (geometry1) {
-                    geometry1.rotateX(0.01);
-                    geometry1.rotateY(0.01);
-                }
-                if (geometry4) {
-                    geometry4.rotateX(0.01);
-                    geometry4.rotateY(0.01);
-                }
-
-
-                renderer.render(scene, camera);
-            }
-            animate();</script>
+                animate();</script>
     </body>
 </html>
