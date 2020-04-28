@@ -16,6 +16,7 @@ The third cube is also one from the lab assignment using fragment and vertex sha
 The fourth cube I made a new FragmentShader file with the colors colorc and color d instead. These colors I set to a magenta color and red color that made the magenta tinge when facing the light. I also used the gl_fragcolor in my fragmentshader2 file to mix the two colors together.
 
 Lab4
+https://drive.google.com/file/d/1ovMPJS_j1-i6mCHQDBTKwKwXFQ2aFOSn/view?usp=sharing
 What is a formula to get the x coordinate of the texture given a u value of the uv coordinate (a value between 0 and 1)?
 What is a formula to get the y coordinate of the texture given a v value of the uv coordinate (a value between 0 and 1)?
 What color is sampled from the texture at the uv coordinate (0.375, 0.25)? (sample from the image based on the number your formula gives you i.e. (1, 0) (x, y) is blue)
