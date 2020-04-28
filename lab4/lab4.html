@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,6 +11,30 @@
         </style>
     </head>
     <body>
+        <script id="vertexShader" type="x-shader/x-vertex">
+            // code for vertex shader
+            varying vec2 vUv;
+            void main() {
+            vUv = uv;
+            vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
+            gl_Position = projectionMatrix * modelViewPosition;
+            }
+        </script>
+
+
+        <script id="fragmentShader" type="x-shader/x-fragment">
+            // code for fragment shader
+            uniform sampler2D texture1;
+            varying vec2 vUv;
+            void main() {
+           // vec4 color0 = texture2D(texture2, vUv * 2.0);
+          //  gl_FragColor = color0;
+            gl_FragColor = texture2D(texture1, vUv);
+            }
+        </script>
+
+        
+
         <script src="../three.js-master/build/three.js"></script>
         <script>// setup the scene
             var scene = new THREE.Scene();
@@ -71,8 +97,29 @@
                     scene.add(mesh1);
                 }
             }
+           /* function lastCube() {
+                var uniforms = {
+                    texture2: {
+                        type: "t", value;
+                        THREE.ImageUtils.loadTexture(171.JPG)
+                    }
+                };
+                uniforms.texture2.value.wrapS = THREE.Repeat;
+                uniforms.texture2.value.wrapT = THREE.Repeat;
+                geometry3 = new THREE.BoxGeometry(1, 1, 1);
 
 
+
+                material3 = new THREE.ShaderMaterial({
+                    uniforms: uniforms,
+                    vertexShader: document.getElementById('vertexShader').textContent,
+                    fragmentShader: document.getElementById('fragmentShader').textContent
+                });
+                mesh2 = new THREE.Mesh(geometry2, material2);
+                mesh2.position.y -= 1.5;
+                scene.add(mesh2);
+            }
+            */
             THREE.Cache.enabled = true;
             var count = 0;
             var loader = new THREE.FileLoader();
@@ -84,7 +131,9 @@
                     console.log(data); // output the text to the console
                     vshader = data;
                     count += 1;
-                    addTextureShaderCube(); // we will write this method
+                    addTextureShaderCube();
+                    lastCube();
+                    // we will write this method
                 },
                 // onProgress callback
                 function (xhr) {
@@ -101,7 +150,8 @@
                     console.log(data); // output the text to the console
                     fshader = data;
                     count += 1;
-                    addTextureShaderCube(); // we will write this method
+                    addTextureShaderCube();
+                    lastCube(); // we will write this method
                 },
                 // onProgress callback
                 function (xhr) {
