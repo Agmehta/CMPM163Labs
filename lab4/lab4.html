@@ -27,8 +27,6 @@
             uniform sampler2D texture1;
             varying vec2 vUv;
             void main() {
-           // vec4 color0 = texture2D(texture2, vUv * 2.0);
-          //  gl_FragColor = color0;
             gl_FragColor = texture2D(texture1, vUv);
             }
         </script>
@@ -101,25 +99,19 @@
                 var uniforms = {
                     texture2: {
                         type: "t", value;
-                        THREE.ImageUtils.loadTexture(171.JPG)
+                        THREE.ImageUtils.loadTexture(171.JPG);
                     }
                 };
-                uniforms.texture2.value.wrapS = THREE.Repeat;
-                uniforms.texture2.value.wrapT = THREE.Repeat;
                 geometry3 = new THREE.BoxGeometry(1, 1, 1);
-
-
-
                 material3 = new THREE.ShaderMaterial({
                     uniforms: uniforms,
                     vertexShader: document.getElementById('vertexShader').textContent,
                     fragmentShader: document.getElementById('fragmentShader').textContent
                 });
+                
                 mesh2 = new THREE.Mesh(geometry2, material2);
-                mesh2.position.y -= 1.5;
                 scene.add(mesh2);
-            }
-            */
+            }*/
             THREE.Cache.enabled = true;
             var count = 0;
             var loader = new THREE.FileLoader();
