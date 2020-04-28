@@ -17,9 +17,9 @@ The fourth cube I made a new FragmentShader file with the colors colorc and colo
 
 Lab4
 https://drive.google.com/file/d/1ovMPJS_j1-i6mCHQDBTKwKwXFQ2aFOSn/view?usp=sharing
-What is a formula to get the x coordinate of the texture given a u value of the uv coordinate (a value between 0 and 1)?
-What is a formula to get the y coordinate of the texture given a v value of the uv coordinate (a value between 0 and 1)?
-What color is sampled from the texture at the uv coordinate (0.375, 0.25)? (sample from the image based on the number your formula gives you i.e. (1, 0) (x, y) is blue)
+What is a formula to get the x coordinate of the texture given a u value of the uv coordinate (a value between 0 and 1)? 1
+What is a formula to get the y coordinate of the texture given a v value of the uv coordinate (a value between 0 and 1)?0
+What color is sampled from the texture at the uv coordinate (0.375, 0.25)? (sample from the image based on the number your formula gives you i.e. (1, 0) (x, y) is blue) - white
 The cube on the left is using a meshphong material with the texture and norm named 171. It uses a normMap.
 The next cube also uses a a meshPhongMaterial but withouth the normalMap. It has the same gemoetry and material.
 The next cube uses a normMap and texture. I loaded a new material2 and added it to the scene.
