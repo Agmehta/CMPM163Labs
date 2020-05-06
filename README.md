@@ -25,3 +25,7 @@ The next cube also uses a a meshPhongMaterial but withouth the normalMap. It has
 The next cube uses a normMap and texture. I loaded a new material2 and added it to the scene.
 The fourth cube uses the fragment and vertex shaders to give it a more 3d look. I used the uniforms and different shaders to create a new mesh.
 My last cube would not show up but I tried to use the built in shader and use the texture 2d line.
+
+Lab5
+https://drive.google.com/file/d/1gxHX3DYdCy_nmC2PyHFCAqWPBPvNHx_X/view?usp=sharing
+I first learned how to change colors. I changed the kartbody to blue and the KartWheels to purple by changing the albedo. I also the wheel a metallic alpha source and increased the smoothness to a 1. I did all this in the inspector when I clicked on components. The second thing I did was create the particles. That I followed the tutorial and made a new particle. Then I messed around with the gravity and color, and attached it to the kart by putting the particle file in the kart file. The particles now move with the kart.
