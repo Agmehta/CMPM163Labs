@@ -29,3 +29,7 @@ My last cube would not show up but I tried to use the built in shader and use th
 Lab5
 https://drive.google.com/file/d/1gxHX3DYdCy_nmC2PyHFCAqWPBPvNHx_X/view?usp=sharing
 I first learned how to change colors. I changed the kartbody to blue and the KartWheels to purple by changing the albedo. I also the wheel a metallic alpha source and increased the smoothness to a 1. I did all this in the inspector when I clicked on components. The second thing I did was create the particles. That I followed the tutorial and made a new particle. Then I messed around with the gravity and color, and attached it to the kart by putting the particle file in the kart file. The particles now move with the kart.
+
+Lab6
+https://www.shadertoy.com/view/wdBfzR  (had to use a name without spaces because it wouldn't save)
+
