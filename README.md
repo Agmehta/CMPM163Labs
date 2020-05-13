@@ -32,4 +32,4 @@ I first learned how to change colors. I changed the kartbody to blue and the Kar
 
 Lab6
 https://www.shadertoy.com/view/wdBfzR  (had to use a name without spaces because it wouldn't save)
-![](lab6/images/png)
+![](lab6/images/lab6part1.htm)
