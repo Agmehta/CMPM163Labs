@@ -34,3 +34,6 @@ Lab6
 my lab: https://www.shadertoy.com/view/wdBfzR  (had to use a name without spaces because it wouldn't save)
 cool link: https://www.shadertoy.com/view/3slcWr
 ![](lab6/images/lab6.png)
+
+Lab 7
+![](lab7/lab7volcano.png)
