@@ -37,3 +37,4 @@ cool link: https://www.shadertoy.com/view/3slcWr
 
 lab7
 ![](lab7/lab7volcano.png)
+![](lab7/meshmanipulation.png)
