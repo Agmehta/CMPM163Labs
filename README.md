@@ -36,6 +36,7 @@ cool link: https://www.shadertoy.com/view/3slcWr
 ![](lab6/images/lab6.png)
 
 lab7
+My partner had a really nice design of an ocean with ships on it. I really liked all the details on the ship. I didn't learn much as I did the unity project. We didn't help eachother either.
 ![](lab7/lab7volcano.png)
 ![](lab7/meshmanipulation.png)
 https://drive.google.com/file/d/1-eIo0tovIhCgDmMjEXDpgzAcfk2tgv6F/view?usp=sharing
