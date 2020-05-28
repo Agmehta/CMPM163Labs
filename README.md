@@ -42,5 +42,6 @@ My partner had a really nice design of an ocean with ships on it. I really liked
 https://drive.google.com/file/d/1-eIo0tovIhCgDmMjEXDpgzAcfk2tgv6F/view?usp=sharing
 
 lab8
+I wanted to model this red city. I changed the color of the buildings and lighting to show this dark red city.
 ![](lab8/redcity.jpg)
 ![](lab8/lab8.png)
